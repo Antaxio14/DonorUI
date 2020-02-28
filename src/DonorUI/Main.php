@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener {
 	
     public function onCommand(CommandSender $sender, Command $cmd, string $label,array $args) : bool {
 		switch($cmd->getName()){
-			case "donor":
+			case "class":
 				if($sender instanceof Player) {
 					$api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
 					$form = $api->createSimpleForm(function (Player $sender, array $data){
@@ -45,10 +45,12 @@ class Main extends PluginBase implements Listener {
 								
 						}
 					});
-					$form->setTitle("RebirthPE DonorUI Screen");
-					$form->setContent("Please choose your command.");
+					$form->setTitle("Antaxio test1YT");
+					$form->setContent("Please choose class.");
 					$form->addButton(TextFormat::BOLD . "Feed");	
-                                        $form->addButton(TextFormat::BOLD . "Fly");	
+                                        $form->addButton(TextFormat::BOLD . "Fly");
+					$form->addButton(TextFormat::BOLD . "§0demon");
+					$form->addButton(TextFormat::BOLD . "2orc");
 					$form->sendToPlayer($sender);
 				}
 				else{
